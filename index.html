@@ -14,6 +14,14 @@
     <!-- Background Canvas for Nodes Animation -->
     <canvas id="node-canvas"></canvas>
     
+    <a href="#hero" class="skip-link">Skip to main content</a>
+
+    <!-- Announcement Banner -->
+    <div class="announcement-banner" id="announcement-banner">
+        <p>Launch Special: Get a Free Consultation on Custom ERP Solutions. <a href="#contact">Book Now!</a></p>
+        <button class="close-banner" aria-label="Close announcement" onclick="document.getElementById('announcement-banner').style.display='none'; document.body.style.paddingTop='0'; document.querySelector('.navbar').style.top='0';">&times;</button>
+    </div>
+
     <!-- Subtle Geometric Overlay -->
     <div class="geometric-overlay"></div>
 
@@ -21,7 +29,19 @@
         <div class="container nav-container">
             <div class="logo">ISOTOPE<span class="text-accent">.tech</span></div>
             <div class="nav-links">
-                <a href="#products">SaaS Products</a>
+                <div class="dropdown">
+                    <a href="#products" class="dropbtn">SaaS Products <span class="arrow">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="https://iron-ledger-five.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <strong>Iron Ledger</strong>
+                            <span>Fitness Enterprise Management</span>
+                        </a>
+                        <a href="https://clear-khata.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <strong>Clear Khata</strong>
+                            <span>Finance & Ledger Management</span>
+                        </a>
+                    </div>
+                </div>
                 <a href="#custom">Custom Software</a>
                 <a href="#advantage">Tech Advantage</a>
                 <a href="#contact" class="btn btn-outline">Contact Us</a>
@@ -171,13 +191,24 @@
     </section>
 
     <footer>
-        <div class="container flex-footer">
-            <div class="footer-brand">
-                <div class="logo">ISOTOPE<span class="text-accent">.tech</span></div>
-                <p>The Fundamental Core of Your Business Operations.</p>
+        <div class="container">
+            <div class="newsletter-section text-center fade-in">
+                <h3 class="section-title" style="font-size: 2rem;">Subscribe to our Newsletter</h3>
+                <p class="advantage-desc" style="margin-bottom: 2rem;">Get the latest updates on our SaaS products and industry insights.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Your email address..." required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
             </div>
-            <div class="footer-links">
-                <p>&copy; 2026 ISOTOPE.tech. All rights reserved.</p>
+            <hr class="footer-divider">
+            <div class="flex-footer">
+                <div class="footer-brand">
+                    <div class="logo">ISOTOPE<span class="text-accent">.tech</span></div>
+                    <p>The Fundamental Core of Your Business Operations.</p>
+                </div>
+                <div class="footer-links">
+                    <p>&copy; 2026 ISOTOPE.tech. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
